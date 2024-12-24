@@ -1,0 +1,63 @@
+
+\documentclass[letterpaper,12pt]{article}
+
+% Choose bibliography style for formatting list of publications
+\usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=ydnt,dashed=false]{biblatex}
+\bibliography{papers}
+
+% Choose theme, e.g. black, RedViolet, ForestGreen, MidnightBlue
+\def\theme{MidnightBlue}
+
+% More predefined colors can be found in
+% https://en.wikibooks.org/wiki/LaTeX/Colors
+% Example photograph taken from Wikimedia Commons
+% https://commons.wikimedia.org/wiki/File:Kiara_Krit_passport.jpg
+
+\usepackage{simplecv}
+
+\boldname{Léonard}{Imbert}{N.}
+
+\begin{document}
+
+% Heading
+\headinginline{Imbert Léonard}{
+    \textbf{Address} : 20 rue Jean Jaures, 44000, Nantes \\
+    \textbf{Academic Email} : imbert@subatech.in2p3.fr\\
+    \textbf{Email} : imbert418@gmail.com\\
+    \textbf{Telephone} : +33649160221\\
+    \textbf{Birth} : 6, Feb. 1998 \\
+    \textbf{Citizenship} : French
+}
+
+% \headingphoto{Name Surname}{
+%     Website: \website{example.com} \\ 
+%     Email: \email{example@example.edu} \\
+%     LinkedIn: \linkedin{name-surname} \\
+%     GitHub: \github{example}
+%}{photo.jpg}
+
+
+% Page One
+%\import{sections/}{pers.tex}
+\input{sections/education}
+\input{sections/Positions}
+\input{sections/scholarships}
+\input{sections/research}
+\input{sections/communications}
+\input{sections/publications}
+\input{sections/schools}
+\pagebreak
+
+\input{sections/teaching}
+\sidebyside
+    {\input{sections/skills}}
+    {\input{sections/languages}}
+
+\include{sections/extracurricular}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{pictures/CNI.png}
+\end{figure}
+% Page Two
+\end{document}
